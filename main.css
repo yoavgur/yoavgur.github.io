@@ -1,0 +1,244 @@
+html {
+  font-size: 72.5%; }
+
+body {
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.7;
+    font-weight: 400;
+    font-family: "Noto Sans", sans-serif;
+    color: #222; 
+}
+
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; margin-top:2.4rem;}
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+div#headpane {
+
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+    height:auto;
+    width: 950px;
+}
+
+div#contentpane {
+    
+    position:relative;
+    margin-top: -10px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 100px;
+    color: #222222;
+    font-size:100%;
+    width: 85%; 
+    background-color: #FFFFFF;
+    clear: both;
+    line-height: 150%;
+    z-index: 1;
+}
+
+div#content {
+    position: relative;
+    top: 20px;
+    margin-left:40px;
+    margin-right:40px;
+    width: auto;
+}
+
+div#pagetitle{
+    
+    text-align:left;
+    margin-top: 3%;
+    /*margin-left: 10%;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    margin-bottom: 3%; /*previously 4*/
+    display: flex;
+    justify-content: center;
+}
+
+#headerimg {
+    margin-left: 100px;
+    border: 2px solid #FFFFFF;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#name {
+    vertical-align: top;
+    text-align: center;
+}
+
+p {
+    height: auto;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+h1{
+    color: #222222;     
+    font-weight: bold;
+    margin: 0% 0% 1% 0%;
+}
+
+h2{
+    color: #222222;
+    margin: -1% 0%;
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+h1 > a{
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1>a:hover {
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#footer {
+    margin: 30px 0px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    font-size:70%;
+    width: 100%;
+    color: #222222;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;    
+}
+
+#footer a:hover, #contentpane a:hover {
+    color: #40A596;
+}
+
+hr {
+    color: #222222;
+    height = 1px;
+}
+
+a {
+    color: #6BD8C9;  
+    text-decoration: none;
+    /*font-weight: normal;*/
+}
+
+table ol {
+    margin: 0%;
+    margin-left: -1.3em;
+}
+
+.rg {
+    border-collapse: collapse;
+    text-align:left;
+    vertical-align: top;
+}
+
+.rg table, .rg th, .rg td{
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.rg th, .rg td {
+    padding: 5px 10px;
+}
+
+.paper {
+  margin-bottom: 20px 
+}
+
+.paper p {
+  margin-bottom: 2px 
+}
+  
+.divider {
+    height: 2px;
+    border: #222222;    
+    background-color: #222222;  
+    margin-top: 3.2rem;  
+    margin-bottom: 2.4rem;  
+  }
+  
+.nav {
+    width: 100%;
+    background-color: #d3f3ef; 
+    border-color: #d3f3ef;
+    color: #222222;
+    margin-top: -13px;
+    margin-left: -8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 90%;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+    height: 50px;
+}
+
+.nav div {
+    padding: 0px 5px;
+}
+
+.nav a {
+    color: #222222;
+}
+
+.nav a:hover {
+    color: #40A596;
+}
+
+#empty {
+    width: 100%;
+    height: 40px;
+}
+
+.on {
+    font-weight: bold;
+}
+
+#buffer {
+    width: 100%;
+    height: 140px;
+    z-index: 0;
+}
+
+#logo {
+    height: 15pt;
+    margin-right: 2px;
+    margin-left: 5px;
+    padding-top: 2px;
+}
