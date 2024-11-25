@@ -1,122 +1,151 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	
-	<title>
-		Yoav Gur-Arieh
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn&display=swap">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Alegreya">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn">
-	<link rel="stylesheet" href="main.css" type="text/css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoav Gur-Arieh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #0078d4, #005bb5);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        section {
+            margin-bottom: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+        section h2 {
+            font-size: 1.8rem;
+            color: #0078d4;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #0078d4;
+            display: inline-block;
+        }
+        section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        section ul li {
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        section ul li:hover {
+            background: #f1f1f1;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.2rem;
+            background: #0078d4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background: #005bb5;
+        }
+        img {
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #222;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-
 <body>
-    
-<div id="contentpane">
-    
-    <div id="content">
+    <header>
+        <h1>Yoav Gur-Arieh</h1>
+        <p>Computer Science Graduate Student at Tel Aviv University</p>
+    </header>
 
-    <div id="pagetitle">
-        
-    <div id="name"> <h1>Yoav Gur-Arieh</h1>
-    <p>Master's Student<br/>
-    Computer Science / NLP / Interpretability, Tel Aviv University<br/>
-    yoavgurarieh@mail.tau.ac.il</p></div>
-    
-    <div id="headerimg"><img src="photo.jpg" width="150px"></div>
-    
-    </div>
-    
+    <main>
+        <section id="about" style="display: flex; align-items: center;">
+            <img src="profile.jpg" alt="Yoav's Profile Picture" style="
+                width: 100px;
+                height: 100px;
+                margin-right: 1.5rem;">
+            <div>
+                <h2>About Me</h2>
+                <p>Hello! I’m Yoav, a graduate student at <a href="https://mega002.github.io/" target="_blank">Mor Geva's</a> lab specializing in NLP with a focus on interpretability in LLMs. I'm currently working on research in knowledge adaptation for LLMs, and SAE feature interpretability.</p>
+            </div>
+        </section>
 
-<div>
-      <h4>About Me</h4>
-      
-      <p>I am a Master's student at Tel Aviv University Name where I am advised by <a href="https://mega002.github.io/" target="_blank">Mor Geva</a>.
-      <p>Currently working on research in knowledge adaptation for LLMs, and SAE feature interpretability.</p>
-      
-      <!--<p>I also had some previous education.</p>-->
-</div>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Large Scale Knowledge Adaptation in LLMs</strong> <em style="color: #6c757d; font-size: 0.9rem;">(ongoing)</em>: Researching novel methods of implanting a large amount of new knowledge into existing LLMs, ensuring that the new knowledge is used by the model.
+                </li>
 
-<!--
-<hr class="divider" />
+                <!--<li>
+                    <strong>Multilingual Jailbreak Analysis:</strong> <em style="color: #6c757d; font-size: 0.9rem;">(ongoing)</em>: Researching novel methods of implanting a large amount of new knowledge into existing LLMs, ensuring that the new knowledge is used by the model.
+                </li>-->
 
-<div>
-      <h4>Publications</h4>
-      
-     <div class="paper">
-          <p class="title"><a href="" target="_blank"><b>This Is the Name of a Paper</b></a></i></p>
-          <p>with Coauthor One, Coauthor Two, and Coauthor Three.</p>
-          <p>In Alice Bob Charlie <b>(ABC 2020)</b>.</p>
-     </div> 
-     
-     <div class="paper">
-          <p class="title"><a href="" target="_blank"><b>Look I Have Another Paper</b></a></p>
-          <p>with Coauthor Four and Coauthor Five.</p>
-          <p>In Xylophone Yemen Zoo <b>(Zoo 2015)</b>.</p>
-     </div> 
+                <li>
+                    <strong>SAE Feature Interpretation</strong> <em style="color: #6c757d; font-size: 0.9rem;">(ongoing)</em>: Working on a new method to automatically create interpretations of SAE features in LLM.
+                </li>
 
+                <li><strong>Parkalot</strong>: Created an <a href="https://play.google.com/store/apps/details?id=com.parkalot.parkingApp" target="_blank" style="text-decoration: none;">app</a> to help find free spots in busy parking lots.</li>
 
+            </ul>
+        </section>
 
-</div>       
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>For a comprehensive look at my experience and work, download my resume:</p>
+            <a href="cv.pdf" target="_blank" class="btn">View Resume</a>
+        </section>
 
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to connect with me through the following channels:</p>
+            <p>Email: <a href="mailto:yoav@example.com" style="color: #0078d4;">yoavgurarieh@mail.tau.ac.il</a></p>
+            <p>GitHub: <a href="https://github.com/yoav" target="_blank" style="color: #0078d4;">github.com/yoavgur</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yoav" target="_blank" style="color: #0078d4;">https://www.linkedin.com/in/yoav-gur-arieh/</a></p>
+        </section>
+    </main>
 
-<hr class="divider" />
-
-<div>
-      <h4>Teaching</h4>
-      
-      <p>
-      <ul>
-      <li>TA in blah, 2017.</li>
-      </ul>
-      </p>
-</div>
-
-<hr class="divider" />
-
-<div>
-
-      <h4>Some Seminar</h4>
-      
-      <p>
-      <table class="rg" style="margin-left:auto; margin-right:auto;">
-      <tr>
-        <th style="width: 100px;">Date</th>
-        <th style="width: 350px;">Speaker</th>
-        <th style="width: 350px;">Title</th>
-      </tr>
-      <tr>
-        <td>9/1/20</td>
-        <td>Alice Bobbington</td>
-        <td>SNARKy STARKs</td>
-      </tr>
-      <tr>
-        <td>9/8/20</td>
-        <td>Charlie Davidson</td>
-        <td>Sharp DAGs</td>
-      </tr>
-      </table></p>
-
-</div>
-
-   
-
-
-    </div>
-
-
-</div>
-
--->
-    <div id="buffer"></div>
-    <div id="footer">   <div>Template by Kira Goldner&#169;</div> </div>
-    <!-- If you really feel uncomfortable with giving me credit by name on your site, rather than deleting, please at lease uncomment and use the following logo credit. -->
-    <!--div id="footer"><div id="logo"> <a href="https://www.kiragoldner.com/" target="_blank"><img src="https://www.kiragoldner.com/favicon.png" width="12pt"/></a></div><div>&#169; Template</div-->
-
-  </body>
-
-
+    <!--<footer>
+        <p>&copy; 2024 Yoav. All rights reserved.</p>
+    </footer>-->
+</body>
 </html>
