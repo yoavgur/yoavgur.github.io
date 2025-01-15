@@ -17,9 +17,3 @@ social: true # includes social icons at the bottom of the page
 
 Hello! I’m Yoav, a graduate student specializing in machine learning with a focus on interpretability and AI systems, currently in [Mor Geva's](https://mega002.github.io/) lab. My passion lies in unraveling complex models to understand their inner workings and developing meaningful applications. Outside of research, I enjoy playing music, slacklining, climbing and spikeball :).
 
-{: #publications}
-## __Publications__
-
-{% for y in page.years %}
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-{% endfor %}
