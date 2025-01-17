@@ -23,15 +23,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-using-sparse-autoencoders-for-knowledge-erasure",
+        },{id: "post-",
       
-        title: "Using Sparse Autoencoders for Knowledge Erasure",
+        title: "",
       
-      description: "Can we leverage SAEs to effectively erase knowledge from LLMs in a targeted way?",
+      description: "",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2025/sae-knowledge-erasure/";
+          window.location.href = "/blog/2025/2025-01-17-sae-knowledge-erasure/";
         
       },
     },{id: "post-a-post-with-image-galleries",
