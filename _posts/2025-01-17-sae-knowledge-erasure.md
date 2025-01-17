@@ -28,7 +28,7 @@ This has made them a particularly intriguing method for influencing LLMs in targ
 
 #### Knowledge Erasure
 
-For simplicity, we use the simplistic setting of fact triplets ($s$, $r$, $o$) where $s$ is the subject, $r$ is the relation, and $o$ is the object. In this setting, our goal would be to affect our language model's ability to generate tokens related to $o$ when prompted with $s$ and $r$. For example, when prompted with the sentence "_Barack Obama_ (subject) _was born in_ (relation)", we want to make it so the language model in question won't answer _Hawaii_ (object).
+For simplicity, we use the simplistic setting of fact triplets ($s$, $r$, $o$) where $s$ is the subject, $r$ is the relation, and $o$ is the object. In this setting, our goal would be to affect our language model's ability to generate tokens related to $o$ when prompted with $s$ and $r$. For example, when prompted with the sentence "*Barack Obama* (subject) *was born in* (relation)", we want to make it so the language model in question won't answer *Hawaii* (object).
 
 To do this, we'd hope to find an SAE feature that activates when prompted with the subject and relation, and which then promotes the token corresponding to the object. The challenge now is finding such a feature.
 
@@ -36,7 +36,7 @@ To do this, we'd hope to find an SAE feature that activates when prompted with t
 
 To find the features of interest, we first need to know where to look. The way LLMs answer knowledge related queries in our setting is detailed in [INSERT REF]. There, they show that the models follow three general steps:
 
-1. Subject enrichment, where the hidden representation of the final token of the subject is enriched by MLP layers with information relating to it. For the subject _Barack Obama_, the token `Obama` would be enriched with information like his birth date, where he went to college, and of course, where he was born.
+1. Subject enrichment, where the hidden representation of the final token of the subject is enriched by MLP layers with information relating to it. For the subject *Barack Obama*, the token `Obama` would be enriched with information like his birth date, where he went to college, and of course, where he was born.
 2. The relation information is propagated from the relation tokens to the final token.
 3. The relation information in the final token is used to extract the relevant information from the last subject token to the final token - i.e. in our example the token `Hawaii` would be extracted from the hidden representation in the `Obama` token position, and moved to the final token position.
 
