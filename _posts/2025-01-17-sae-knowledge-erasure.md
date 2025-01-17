@@ -74,9 +74,7 @@ And these results seem to replicate across many facts!
 | Marie Antoinette was queen of              | **France** from 1774 to 1792.                                                     | France (`18/11591`)          | **the United Kingdom** from 1743 to 1745.                                                                                            |
 | Marie Curie discovered the element         | **Radium** in 1898 She was awarded the Nobel Prize in Physics in 1903 ...         | Nuclear (`16/2072`)          | **Platinum** in 1800. It was named after the Greek goddess ...                                                                       |
 
-
 <br/>
-
 
 #### Conclusion, Limitations and Future Directions
 Sparse autoencoders present a compelling framework for knowledge erasure by disentangling and selectively manipulating learned representations. We showed that this can enable us to perform targeted erasures, removing the undesirable knowledge and leaving the model still capable. For example, when we ablated the UK feature for Winston Churchill, the model continued the prompt saying that he was the prime minister of the US. But, it also added that it was during the Second World War (correct period) and that he was the first person to be elected to that office! Meaning while we edited the fact such that UK -> US, the model still has its context about the US governing structure. 
