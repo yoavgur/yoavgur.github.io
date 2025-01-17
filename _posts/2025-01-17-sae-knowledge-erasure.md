@@ -75,6 +75,7 @@ And these results seem to replicate across many facts!
 | Marie Curie discovered the element         | **Radium** in 1898 She was awarded the Nobel Prize in Physics in 1903 ...         | Nuclear (`16/2072`)          | **Platinum** in 1800. It was named after the Greek goddess ...                                                                       |
 
 
+---
 
 
 #### Conclusion, Limitations and Future Directions
