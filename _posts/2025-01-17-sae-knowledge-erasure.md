@@ -50,7 +50,7 @@ To find the features of interest, we first need to know where to look. The way L
 
 That means that a good way to erase the knowledge we want to erase, is to find which MLP SAE features are responsible for enriching the subject token with the information we want to erase.
 
-So now we know where to look - MLP SAE features that activate on the last token position of the subject token. But how do we know which one of these tokens?
+So now we know where to look - MLP SAE features that activate on the last token position of the subject token. But how do we know which one of these features?
 
 We could use existing feature descriptions, available for Gemma on Neuronpedia, to isolate ones that look like they relate. But as we showed in our paper<d-cite key="gurarieh2025enhancingautomatedinterpretabilityoutputcentric"></d-cite>, the methods used for generating these descriptions are mostly related to what activates a feature and not what it does once activated. Therefore, for each feature we can use vocabulary projection on the feature's SAE decode column, and look to see if there are relevant tokens there - i.e. ones related to the object in our fact. Indeed, when looking at all MLP SAE features that activate for the token `Obama`, we see that feature 4999 in layer 6 seems to encode for the concept of the USA, and that `Hawaii` appears in the top 100 tokens of its vocabulary projection. This seems to be the feature we're looking for!
 
