@@ -15,6 +15,8 @@ authors:
 
 bibliography: 2025-01-17-sae-knowledge-erasure.bib
 
+thumbnail: assets/img/sae_erasure.png
+
 # Optionally, you can add a table of contents to your post.
 # NOTES:
 #   - make sure that TOC names match the actual section names
