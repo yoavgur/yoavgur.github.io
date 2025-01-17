@@ -13,7 +13,7 @@ authors:
     affiliations:
       name: Tel Aviv University
 
-# bibliography: 2018-12-22-distill.bib
+ bibliography: 2025-01-17-sae-knowledge-erasure.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
