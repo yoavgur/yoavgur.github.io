@@ -5,7 +5,7 @@ description: Can we leverage SAEs to effectively erase knowledge from LLMs in a 
 tags: NLP SAEs Interpretability AI ML
 giscus_comments: false
 date: 2025-01-17
-featured: true
+featured: false
 pretty_table: true
 citation: true
 
