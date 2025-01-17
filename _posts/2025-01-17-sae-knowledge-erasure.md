@@ -1,5 +1,5 @@
 ---
-layout: post #distill
+layout: distill
 title: Using Sparse Autoencoders for Knowledge Erasure
 description: Can we leverage SAEs to effectively erase knowledge from LLMs in a targeted way?
 tags: NLP SAEs Interpretability AI ML
