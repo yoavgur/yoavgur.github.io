@@ -6,6 +6,7 @@ tags: NLP SAEs Interpretability AI ML
 giscus_comments: false
 date: 2025-01-17
 featured: true
+pretty_table: true
 
 authors:
   - name: Yoav Gur Arieh
@@ -74,7 +75,7 @@ And these results seem to replicate across many facts!
 | Barack Obama was born in                   | **Hawaii**, but he was raised in Indonesia. He was a student at Occidental.       | US (`6/4999`)                | 1964 in the small town of **Kinyanya, Kenya**.                                                                                       |
 | George Bush was the governor of            | **Texas** when he was elected president.                                          | Texas (`7/10671`)            | **Florida** when he was elected president.                                                                                           |
 | The Dalai Lama is a spiritual leader from  | **Tibet**. He is the 14th Dalai Lama                                              | Tibet (`17/8560`)            | **India**. He is a Nobel Peace Prize winner.                                                                                         |
-| Winston Churchil was the Prime Minister of | the **United Kingdom** during World War II. He was a great leader and a ...       | UK (`14/8456`)           | the **United States** during the Second World War. He was the first person to be elected to the office of Prime Minister in the U.S. |
+| Winston Churchill was the Prime Minister of | the **United Kingdom** during World War II. He was a great leader and a ...       | UK (`14/8456`)           | the **United States** during the Second World War. He was the first person to be elected to the office of Prime Minister in the U.S. |
 | Thomas Jefferson wrote the                 | **Declaration of Independence** in 1776. He was the third president ...           | Founding Fathers (`18/7722`) | **the following** letter to the editor of the New York Journal.                                                                      |
 | The Taj Mahal is located in                | the country of **India**, it is a mausoleum build by the Mughal emperor Sha Jahan | India (`4/16258`)            | the country of **the United States**. It is a monument that is dedicated to the memory ...                                           |
 | The Burj Khalifa is located in             | **Dubai**, United Arab Emirates.                                                  | Dubai (`14/6856`)            | **Chicago**, Illinois.                                                                                                               |
@@ -83,6 +84,6 @@ And these results seem to replicate across many facts!
 | Marie Curie discovered the element         | **Radium** in 1898 She was awarded the Nobel Prize in Physics in 1903 ...         | Nuclear (`16/2072`)          | **Platinum** in 1800. It was named after the Greek goddess ...                                                                       |
 
 #### Conclusion, Limitations and Future Directions
-Sparse autoencoders present a compelling framework for knowledge erasure by disentangling and selectively manipulating learned representations. We showed that this can enable us to perform targeted erasures, removing the undesirable knowledge and leaving the model still capable. For example, when we ablated the UK feature for Winston Churchil, the model continued the prompt saying that he was the prime minister of the US. But, it also added that it was during the Second World War (correct period) and that he was the first person to be elected to that office! Meaning while we edited the fact such that UK -> US, the model still has its context about the US governing structure. 
+Sparse autoencoders present a compelling framework for knowledge erasure by disentangling and selectively manipulating learned representations. We showed that this can enable us to perform targeted erasures, removing the undesirable knowledge and leaving the model still capable. For example, when we ablated the UK feature for Winston Churchill, the model continued the prompt saying that he was the prime minister of the US. But, it also added that it was during the Second World War (correct period) and that he was the first person to be elected to that office! Meaning while we edited the fact such that UK -> US, the model still has its context about the US governing structure. 
 
 While these results showcase intriguing potential, they remain a proof-of-concept. Establishing whether SAEs can truly serve as a reliable method for knowledge erasure—or for broader knowledge editing—requires rigorous evaluation. Future work should systematically test their precision in editing knowledge without unintended side effects on model performance.
