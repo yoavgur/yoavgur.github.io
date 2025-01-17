@@ -21,6 +21,17 @@ bibliography: 2025-01-17-sae-knowledge-erasure.bib
 #     for hyperlinks within the post to work correctly.
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
+
+_styles: >
+  .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
 ---
 
 #### Introduction
