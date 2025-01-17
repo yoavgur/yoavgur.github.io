@@ -7,6 +7,7 @@ giscus_comments: false
 date: 2025-01-17
 featured: true
 pretty_table: true
+citation: true
 
 authors:
   - name: Yoav Gur Arieh
