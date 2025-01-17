@@ -9,6 +9,9 @@ featured: true
 
 authors:
   - name: Yoav Gur Arieh
+    url: "https://yoav.ml"
+    affiliations:
+      name: Tel Aviv University
 
 # bibliography: 2018-12-22-distill.bib
 

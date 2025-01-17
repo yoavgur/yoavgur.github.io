@@ -1,0 +1,38 @@
+@inproceedings{geva-etal-2023-dissecting,
+    title = "Dissecting Recall of Factual Associations in Auto-Regressive Language Models",
+    author = "Geva, Mor  and
+      Bastings, Jasmijn  and
+      Filippova, Katja  and
+      Globerson, Amir",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.751/",
+    doi = "10.18653/v1/2023.emnlp-main.751",
+    pages = "12216--12235",
+    abstract = "Transformer-based language models (LMs) are known to capture factual knowledge in their parameters. While previous work looked into where factual associations are stored, only little is known about how they are retrieved internally during inference. We investigate this question through the lens of information flow. Given a subject-relation query, we study how the model aggregates information about the subject and relation to predict the correct attribute. With interventions on attention edges, we first identify two critical points where information propagates to the prediction: one from the relation positions followed by another from the subject positions. Next, by analyzing the information at these points, we unveil a three-step internal mechanism for attribute extraction. First, the representation at the last-subject position goes through an enrichment process, driven by the early MLP sublayers, to encode many subject-related attributes. Second, information from the relation propagates to the prediction. Third, the prediction representation {\textquotedblleft}queries{\textquotedblright} the enriched subject to extract the attribute. Perhaps surprisingly, this extraction is typically done via attention heads, which often encode subject-attribute mappings in their parameters. Overall, our findings introduce a comprehensive view of how factual associations are stored and extracted internally in LMs, facilitating future research on knowledge localization and editing."
+}
+
+@misc{gurarieh2025enhancingautomatedinterpretabilityoutputcentric,
+      title={Enhancing Automated Interpretability with Output-Centric Feature Descriptions}, 
+      author={Yoav Gur-Arieh and Roy Mayan and Chen Agassy and Atticus Geiger and Mor Geva},
+      year={2025},
+      eprint={2501.08319},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.08319}, 
+}
+
+@misc{farrell2024applying,
+    title={Applying sparse autoencoders to unlearn knowledge in language models},
+    author={Eoin Farrell and Yeu-Tong Lau and Arthur Conmy},
+    year={2024},
+    eprint={2410.19278},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
