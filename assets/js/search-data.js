@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-using-sparse-autoencoders-for-knowledge-erasure",
+        },{id: "post-enhancing-automated-interpretability-pipelines-with-output-centric-feature-descriptions",
+      
+        title: "Enhancing Automated Interpretability Pipelines with Output-Centric Feature Descriptions",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/enhancing-interp/";
+        
+      },
+    },{id: "post-using-sparse-autoencoders-for-knowledge-erasure",
       
         title: "Using Sparse Autoencoders for Knowledge Erasure",
       
