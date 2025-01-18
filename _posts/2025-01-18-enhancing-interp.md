@@ -68,7 +68,7 @@ Remarkably, an ensemble of the three methods performs better than all individual
 
 
 <div class="l-page">
-  <iframe src="plot.html" frameborder='0' scrolling='no' height="400px" width="760px" style="border: 1px dashed grey;"></iframe>
+  <iframe src="{{ '/assets/plotly/enhancing_results.html' | relative_url }}" frameborder='0' scrolling='no' height="400px" width="760px" style="border: 1px dashed grey;"></iframe>
 </div>
 
 <br/>
