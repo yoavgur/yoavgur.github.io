@@ -15,7 +15,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! I’m Yoav, a graduate student at Mor Geva’s lab, where I specialize in interpretability research in LLMs. My work focuses on understanding how large language models operate internally, particularly how they store and retrieve knowledge. I also explore methods to refine these systems to make them safer and more effective for diverse applications.
+Hello! I’m Yoav, a graduate student at [Mor Geva’s](mega002.github.io) lab, where I specialize in interpretability research in LLMs. My work focuses on understanding how large language models operate internally, particularly how they store and retrieve knowledge. I also explore methods to refine these systems to make them safer and more effective for diverse applications.
 
 Beyond my research, I’m part of the Adi Lautman Interdisciplinary Program for Outstanding Students at Tel Aviv University. This unique program fosters creativity and independent thinking, allowing students to explore any academic field. I’ve taken advantage of this freedom to study biology, neuroscience, philosophy, and history, gaining insights that complement my technical work.
 
