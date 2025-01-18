@@ -17,7 +17,7 @@ authors:
 
 bibliography: 2025-01-18-enhancing-interp.bib
 
-thumbnail: assets/img/sae_erasure.png
+thumbnail: assets/img/enhancing.png
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -27,7 +27,6 @@ thumbnail: assets/img/sae_erasure.png
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 
 ---
-
 
 #### Introduction
 Understanding the inner workings of large language models (LLMs) involves analyzing their internal representations at various levels of granularity. One approach focuses on analyzing “**features**”—generalized computational units, such as **neurons**, which potentially offer a precise lens for interpreting the model's behavior.
@@ -69,4 +68,7 @@ Remarkably, an ensemble of the three methods performs better than all individual
   <iframe src="{{ '/assets/plotly/enhancing_results.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
 </div>
 
-Pretty cool!
+#### Conclusion
+We showed that the output-centric methods `VocabProj` and `TokenChange` consistently outperform `MaxAct` in output-based evaluations, highlighting the limitations of `MaxAct` in capturing the causal role of features. Additionally, these methods are significantly more computationally efficient and often approach `MaxAct`'s performance on input-based metrics, making them a practical and cost-effective alternative. Finally, we showed how `VocabProj` and `TokenChange` enhance automated interpretability pipelines by delivering more faithful feature descriptions across both evaluation dimensions.
+
+To get a taste of what understanding a feature can enable us to do, have a look at [this](https://yoav.ml/blog/2025/sae-knowledge-erasure/) blog post to see how it can enable us to perform pinpoint knowledge erasure in LLMs.
