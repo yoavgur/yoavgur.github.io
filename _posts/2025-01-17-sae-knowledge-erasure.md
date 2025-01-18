@@ -17,7 +17,7 @@ authors:
 
 bibliography: 2025-01-17-sae-knowledge-erasure.bib
 
-thumbnail: assets/img/sae_erasure.png
+thumbnail: assets/img/sae_erasure.gif
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
