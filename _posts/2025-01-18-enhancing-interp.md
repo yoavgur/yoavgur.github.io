@@ -66,8 +66,9 @@ Unsurprisingly, each method excels in its own category. The input-centric method
 
 Remarkably, an ensemble of the three methods performs better than all individual methods on both metrics! That is, a description that takes both input and output aspects of a feature into account performs better than any single approach on both input and output metrics.
 
+
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/enhancing_results.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
+  <iframe src="plot.html" frameborder='0' scrolling='no' height="400px" width="760px" style="border: 1px dashed grey;"></iframe>
 </div>
 
 <br/>
