@@ -74,4 +74,5 @@ Remarkably, an ensemble of the three methods performs better than all individual
 ### Conclusion
 We showed that the output-centric methods `VocabProj` and `TokenChange` consistently outperform `MaxAct` in output-based evaluations, highlighting the limitations of `MaxAct` in capturing the causal role of features. Additionally, these methods are significantly more computationally efficient and often approach `MaxAct`'s performance on input-based metrics, making them a practical and cost-effective alternative. Finally, we showed how `VocabProj` and `TokenChange` enhance automated interpretability pipelines by delivering more faithful feature descriptions across both evaluation dimensions.
 
-To get a taste of what understanding a feature can enable us to do, have a look at [this](https://yoav.ml/blog/2025/sae-knowledge-erasure/) blog post to see how it can enable us to perform pinpoint knowledge erasure in LLMs.
+For a demonstration of how understanding a feature translates into real-world applications, have a look at [this](https://yoav.ml/blog/2025/sae-knowledge-erasure/) blog post showcasing how it can facilitate knowledge erasure in LLMs.
+For more details about this work you can read our [paper](https://arxiv.org/abs/2501.08319).
