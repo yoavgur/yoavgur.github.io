@@ -67,11 +67,9 @@ Unsurprisingly, each method excels in its own category. The input-centric method
 Remarkably, an ensemble of the three methods performs better than all individual methods on both metrics! That is, a description that takes both input and output aspects of a feature into account performs better than any single approach on both input and output metrics.
 
 
-<div class="l-page">
+<div class="l-page" style="display: flex; justify-content: center;">
   <iframe src="{{ '/assets/plotly/enhancing_results.html' | relative_url }}" frameborder='0' scrolling='no' height="400px" width="760px" style="border: 1px dashed grey;"></iframe>
 </div>
-
-<br/>
 
 ### Conclusion
 We showed that the output-centric methods `VocabProj` and `TokenChange` consistently outperform `MaxAct` in output-based evaluations, highlighting the limitations of `MaxAct` in capturing the causal role of features. Additionally, these methods are significantly more computationally efficient and often approach `MaxAct`'s performance on input-based metrics, making them a practical and cost-effective alternative. Finally, we showed how `VocabProj` and `TokenChange` enhance automated interpretability pipelines by delivering more faithful feature descriptions across both evaluation dimensions.
