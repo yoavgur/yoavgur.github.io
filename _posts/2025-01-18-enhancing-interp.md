@@ -70,6 +70,8 @@ Remarkably, an ensemble of the three methods performs better than all individual
   <iframe src="{{ '/assets/plotly/enhancing_results.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
 </div>
 
+<br/>
+
 ### Conclusion
 We showed that the output-centric methods `VocabProj` and `TokenChange` consistently outperform `MaxAct` in output-based evaluations, highlighting the limitations of `MaxAct` in capturing the causal role of features. Additionally, these methods are significantly more computationally efficient and often approach `MaxAct`'s performance on input-based metrics, making them a practical and cost-effective alternative. Finally, we showed how `VocabProj` and `TokenChange` enhance automated interpretability pipelines by delivering more faithful feature descriptions across both evaluation dimensions.
 
