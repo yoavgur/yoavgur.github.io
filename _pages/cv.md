@@ -6,4 +6,3 @@ nav: true
 nav_order: 5
 ---
 <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/assets/pdf/cv.pdf">
-<p>Redirecting to <a href="{{ site.baseurl }}/assets/pdf/cv.pdf">CV PDF</a>...</p>
