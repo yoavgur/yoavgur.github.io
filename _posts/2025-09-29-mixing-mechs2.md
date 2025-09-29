@@ -35,13 +35,6 @@ Understanding the inner workings of large language models (LLMs) involves analyz
 
 
 
-<div id="binding-demo-root" data-mode="interactive" data-show-title="true" data-initial-n="12"></div>
-
-<link rel="stylesheet" href="{{ '/assets/css/binding-demo/index-BEOe_g9O.css' | relative_url }}">
-
-<script type="module" defer src="{{ '/assets/js/binding-demo/index-B_g5bwzp.js' | relative_url }}"></script>
-
-
 
 
 ### Focusing on the Output
