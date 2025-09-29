@@ -34,14 +34,7 @@ This is a blog post version of the [paper](https://arxiv.org/abs/2501.08319) we 
 Understanding the inner workings of large language models (LLMs) involves analyzing their internal representations at various levels of granularity. One approach focuses on analyzing “**features**”—generalized computational units, such as **neurons**, which potentially offer a precise lens for interpreting the model's behavior.
 
 
-
-<div id="binding-demo-root" data-mode="interactive" data-show-title="true" data-initial-n="12"></div>
-
-<link rel="stylesheet" href="{{ '/assets/css/binding-demo/index-BEOe_g9O.css' | relative_url }}">
-
-<script type="module" defer src="{{ '/assets/js/binding-demo/index-B_g5bwzp.js' | relative_url }}"></script>
-
-
+<div data-binding-demo data-mode="interactive" data-show-title="true" data-initial-n="12"></div>
 
 
 ### Focusing on the Output
@@ -51,7 +44,8 @@ The second method, dubbed `TokenChange`, takes a more causal approach. In this m
 
 These two methods are inexpensive to run, and provide us with insights regarding how a feature actually affects the model. Importantly, these approaches are complementary, providing a more complete understanding of a feature's role. For instance, consider the MLP SAE feature `19/5635` from Gemma-2 2B. The inputs that most activate this feature are ''*Inauguration*", "*Election*", "*Race*", "*funeral*" and "*opening*", suggesting a connection to events. Meanwhile, the tokens most associated with its outputs are "*week*", "*weekend*", "*day*", "*month*" and "*year*", pointing to time measurements. Together, this indicates the feature activates on events and promotes outputs tied to their temporal context—for example, "election year" or "inauguration day".
 
-
+<!-- <div data-binding-demo data-mode="static" data-show-title="false" data-show-sentence="false" data-initial-n="12" data-initial-i-p="1"></div> -->
+<div data-binding-demo data-mode="static" data-initial-n="13" data-initial-ip="4" data-initial-il="11" data-initial-ir="9" data-initial-target="1" data-show-title="false" data-show-sentence="false"></div>
 
 
 
@@ -59,6 +53,18 @@ These two methods are inexpensive to run, and provide us with insights regarding
 To evaluate these feature descriptions, we propose an input-based evaluation and an output based one. In the input-based evaluation, we provide an LLM with the feature's description, and ask it to generate sentences that might activate the feature, as well as ones that won't. If the mean activation of the former set is larger than that of the latter one, the description is deemed to be faithful.
 
 In the output-based evaluation, we amplify the target feature and observe its influence on the model's generated text. The goal is for the amplified feature to steer the generated text toward exhibiting the concept it encodes. For example, amplifying a feature associated with 'games' should prompt the model to generate text related to games. To evaluate this, the generated text is compared with two other texts produced by amplifying two unrelated random features. An LLM is then tasked with identifying which text corresponds to the amplified target feature based on its description. If it answers correctly, the description is deemed to be faithful.
+
+<div data-binding-demo 
+     data-mode="animated" 
+     data-initial-n="15" 
+     data-initial-ip="4" 
+     data-initial-il="1" 
+     data-initial-ir="9" 
+     data-initial-target="2" 
+     data-show-title="false" 
+     data-show-sentence="false"
+     data-animation-sequence='[{"iL":1,"delay":500},{"iL":2,"delay":500},{"iL":3,"delay":500},{"iL":4,"delay":500},{"iL":5,"delay":500},{"iL":6,"delay":500},{"iL":7,"delay":500},{"iL":8,"delay":500},{"iL":9,"delay":500},{"iL":10,"delay":500},{"iL":11,"delay":500},{"iL":12,"delay":500},{"iL":13,"delay":500},{"iL":14,"delay":500},{"iL":15,"delay":500},{"iL":16,"delay":500},{"iL":17,"delay":500}]'>
+</div>
 
 ### Results
 Unsurprisingly, each method excels in its own category. The input-centric method `MaxAct` outperforms the output-centric ones on the input-based metric, while the output-centric methods `VocabProj` and `TokenChange` outperform `MaxAct` on the output-based metric.
@@ -75,3 +81,7 @@ We showed that the output-centric methods `VocabProj` and `TokenChange` consiste
 
 For a demonstration of how understanding a feature translates into real-world applications, have a look at [this](https://yoav.ml/blog/2025/sae-knowledge-erasure/) blog post showcasing how it can facilitate knowledge erasure in LLMs.
 For more details about this work you can read our [paper](https://arxiv.org/abs/2501.08319).
+
+
+<link rel="stylesheet" href="{{ '/assets/css/binding-demo/index-BEOe_g9O.css' | relative_url }}">
+<script type="module" defer src="{{ '/assets/js/binding-demo/index-B_g5bwzp.js' | relative_url }}"></script>
