@@ -56,11 +56,11 @@ In the output-based evaluation, we amplify the target feature and observe its in
 
 <div data-binding-demo 
      data-mode="animated" 
-     data-initial-n="15" 
+     data-initial-n="8" 
      data-initial-ip="4" 
      data-initial-il="1" 
-     data-initial-ir="9" 
-     data-initial-target="2" 
+     data-initial-ir="8" 
+     data-initial-target="1" 
      data-show-title="false" 
      data-show-sentence="false"
      data-animation-sequence='[{"iL":1,"delay":500},{"iL":2,"delay":500},{"iL":3,"delay":500},{"iL":4,"delay":500},{"iL":5,"delay":500},{"iL":6,"delay":500},{"iL":7,"delay":500},{"iL":8,"delay":500},{"iL":9,"delay":500},{"iL":10,"delay":500},{"iL":11,"delay":500},{"iL":12,"delay":500},{"iL":13,"delay":500},{"iL":14,"delay":500},{"iL":15,"delay":500},{"iL":16,"delay":500},{"iL":17,"delay":500}]'>
