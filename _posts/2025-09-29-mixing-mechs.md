@@ -17,7 +17,7 @@ authors:
 
 bibliography: 2025-01-18-enhancing-interp.bib
 
-thumbnail: assets/img/enhancing.gif
+thumbnail: assets/img/binding.png
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
