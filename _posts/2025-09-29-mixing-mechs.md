@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context
+title: Mixing Mechanisms - How Language Models Retrieve Bound Entities In-Context
 description: To reason, LMs must bind together entities in-context. How they do this is more complicated than was first thought.
 tags: NLP Binding Interpretability AI ML
 giscus_comments: false
