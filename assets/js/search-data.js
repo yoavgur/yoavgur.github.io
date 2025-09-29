@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-enhancing-automated-interpretability-pipelines-with-output-centric-feature-descriptions",
+        },{id: "post-",
+      
+        title: "",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/2025-09-29-mixing-mechs/";
+        
+      },
+    },{id: "post-enhancing-automated-interpretability-pipelines-with-output-centric-feature-descriptions",
       
         title: "Enhancing Automated Interpretability Pipelines with Output-Centric Feature Descriptions",
       
