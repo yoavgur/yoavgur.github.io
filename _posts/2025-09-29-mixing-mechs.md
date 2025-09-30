@@ -15,6 +15,17 @@ authors:
     affiliations:
       name: Tel Aviv University
 
+  - name: Mor Geva
+    url: "https://mega002.github.io/"
+    affiliations:
+      name: Tel Aviv University
+
+  - name: Atticus Geiger
+    url: "http://prair.group/"
+    affiliations:
+      name: Pr(Ai)²R
+
+
 bibliography: 2025-01-18-enhancing-interp.bib
 
 thumbnail: assets/img/binding.png
