@@ -1,0 +1,509 @@
+@article{Fodor1988-ConnectionismCognitiveArchitecture,
+  author    = {Jerry A. Fodor and Zenon W. Pylyshyn},
+  title     = {Connectionism and Cognitive Architecture: A Critical Analysis},
+  journal   = {Cognition},
+  volume    = {28},
+  number    = {1-2},
+  pages     = {3-71},
+  year      = {1988},
+  doi       = {10.1016/0010-0277(88)90031-5}
+}
+
+@misc{geiger2025causalabstractionunderpinscomputational,
+      title={How Causal Abstraction Underpins Computational Explanation}, 
+      author={Atticus Geiger and Jacqueline Harding and Thomas Icard},
+      year={2025},
+      eprint={2508.11214},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2508.11214}, 
+}
+
+@inproceedings{geiger-etal-2020-neural,
+    title = "Neural Natural Language Inference Models Partially Embed Theories of Lexical Entailment and Negation",
+    author = "Geiger, Atticus  and
+      Richardson, Kyle  and
+      Potts, Christopher",
+    editor = "Alishahi, Afra  and
+      Belinkov, Yonatan  and
+      Chrupa{\l}a, Grzegorz  and
+      Hupkes, Dieuwke  and
+      Pinter, Yuval  and
+      Sajjad, Hassan",
+    booktitle = "Proceedings of the Third BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.blackboxnlp-1.16/",
+    doi = "10.18653/v1/2020.blackboxnlp-1.16",
+    pages = "163--173",
+    abstract = "We address whether neural models for Natural Language Inference (NLI) can learn the compositional interactions between lexical entailment and negation, using four methods: the behavioral evaluation methods of (1) challenge test sets and (2) systematic generalization tasks, and the structural evaluation methods of (3) probes and (4) interventions. To facilitate this holistic evaluation, we present Monotonicity NLI (MoNLI), a new naturalistic dataset focused on lexical entailment and negation. In our behavioral evaluations, we find that models trained on general-purpose NLI datasets fail systematically on MoNLI examples containing negation, but that MoNLI fine-tuning addresses this failure. In our structural evaluations, we look for evidence that our top-performing BERT-based model has learned to implement the monotonicity algorithm behind MoNLI. Probes yield evidence consistent with this conclusion, and our intervention experiments bolster this, showing that the causal dynamics of the model mirror the causal dynamics of this algorithm on subsets of MoNLI. This suggests that the BERT model at least partially embeds a theory of lexical entailment and negation at an algorithmic level."
+}
+
+@inproceedings{
+pislar2025combining,
+title={Combining Causal Models for More Accurate Abstractions of Neural Networks},
+author={Theodora-Mara P{\^\i}slar and Sara Magliacane and Atticus Geiger},
+booktitle={Fourth Conference on Causal Learning and Reasoning},
+year={2025},
+url={https://openreview.net/forum?id=mVftlEi1CD}
+}
+
+@inproceedings{Brown2020,
+ author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
+ pages = {1877--1901},
+ publisher = {Curran Associates, Inc.},
+ title = {Language Models are Few-Shot Learners},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf},
+ volume = {33},
+ year = {2020}
+}
+
+
+@book{Ebbinghaus1913,
+  author    = {Ebbinghaus, Hermann},
+  title     = {Memory: A Contribution to Experimental Psychology},
+  publisher = {Teachers College, Columbia University},
+  year      = {1913},
+  address   = {New York, NY, US}
+}
+
+@inproceedings{
+wu2025how,
+title={How Do Transformers Learn Variable Binding in Symbolic Programs?},
+author={Yiwei Wu and Atticus Geiger and Rapha{\"e}l Milli{\`e}re},
+booktitle={Forty-second International Conference on Machine Learning},
+year={2025},
+url={https://openreview.net/forum?id=kVtyv7bpnw}
+}
+
+
+@InProceedings{geiger2024,
+  title = 	 {Finding Alignments Between Interpretable Causal Variables and Distributed Neural Representations},
+  author =       {Geiger, Atticus and Wu, Zhengxuan and Potts, Christopher and Icard, Thomas and Goodman, Noah},
+  booktitle = 	 {Proceedings of the Third Conference on Causal Learning and Reasoning},
+  pages = 	 {160--187},
+  year = 	 {2024},
+  editor = 	 {Locatello, Francesco and Didelez, Vanessa},
+  volume = 	 {236},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {01--03 Apr},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v236/geiger24a/geiger24a.pdf},
+  url = 	 {https://proceedings.mlr.press/v236/geiger24a.html},
+  abstract = 	 {Causal abstraction is a promising theoretical framework for explainable artificial intelligence that defines when an interpretable high-level causal model is a faithful simplification of a low-level deep learning system. However, existing causal abstraction methods have two major limitations: they require a brute-force search over alignments between the high-level model and the low-level one, and they presuppose that variables in the high-level model will align with disjoint sets of neurons in the low-level one. In this paper, we present distributed alignment search (DAS), which overcomes these limitations. In DAS, we find the alignment between high-level and low-level models using gradient descent rather than conducting a brute-force search, and we allow individual neurons to play multiple distinct roles by analyzing representations in non-standard bases—distributed representations. Our experiments show that DAS can discover internal structure that prior approaches miss. Overall, DAS removes previous obstacles to uncovering conceptual structure in trained neural nets.}
+}
+
+
+@article{geiger2025,
+  author  = {Atticus Geiger and Duligur Ibeling and Amir Zur and Maheep Chaudhary and Sonakshi Chauhan and Jing Huang and Aryaman Arora and Zhengxuan Wu and Noah Goodman and Christopher Potts and Thomas Icard},
+  title   = {Causal Abstraction: A Theoretical Foundation for Mechanistic Interpretability},
+  journal = {Journal of Machine Learning Research},
+  year    = {2025},
+  volume  = {26},
+  number  = {83},
+  pages   = {1--64},
+  url     = {http://jmlr.org/papers/v26/23-0058.html}
+}
+
+@article{Miller1959,
+author = {Miller, Norman and Campbell, Donald},
+year = {1959},
+month = {07},
+pages = {1-9},
+title = {Recency and Primacy in Persuasion as a Function of Timing of Speeches and Measurement},
+volume = {59},
+journal = {Journal of abnormal psychology},
+doi = {10.1037/h0049330}
+}
+
+@article{Pollack1985,
+title = {Recursive distributed representations},
+journal = {Artificial Intelligence},
+volume = {46},
+number = {1},
+pages = {77-105},
+year = {1990},
+issn = {0004-3702},
+doi = {https://doi.org/10.1016/0004-3702(90)90005-K},
+url = {https://www.sciencedirect.com/science/article/pii/000437029090005K},
+author = {Jordan B. Pollack},
+abstract = {A longstanding difficulty for connectionist modeling has been how to represent variable-sized recursive data structures, such as trees and lists, in fixed-width patterns. This paper presents a connectionist architecture which automatically develops compact distributed representations for such compositional structures, as well as efficient accessing mechanisms for them. Patterns which stand for the internal nodes of fixed-valence trees are devised through the recursive use of backpropagation on three-layer auto-associative encoder networks. The resulting representations are novel, in that they combine apparently immiscible aspects of features, pointers, and symbol structures. They form a bridge between the data structures necessary for high-level cognitive tasks and the associative, pattern recognition machinery provided by neural networks.}
+}
+
+@inproceedings{Touretzky1985,
+author = {Touretzky, David S. and Minton, Geoffrey E.},
+title = {Symbols among the neurons: details of a connectionist inference architecture},
+year = {1985},
+isbn = {0934613028},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Pattern matching and variable binding are easily implemented in conventional computer architectures, but not necessarily in all architectures. In a distributed neural network architecture each symbol is represented by activity in many units and each unit contributes to the representation of many symbols. Manipulating symbols using this type of distributed representation is not as easy as with a local representation whore each unit denotes one symbol, but there is evidence that the distributed approach is the one chosen by nature. We describe a working implementation of a production system interpreter in a neural network using distributed representations for both symbols and rules. The research provides a detailed account of two important symbolic reasoning operations, pattern matching and variable binding, as emergent properties of collections of neuron-like elements. The success of our production system implementation goes some way towards answering a common criticism of connectionist theories: that they aren't powerful enough to do symbolic reasoning.},
+booktitle = {Proceedings of the 9th International Joint Conference on Artificial Intelligence - Volume 1},
+pages = {238–243},
+numpages = {6},
+location = {Los Angeles, California},
+series = {IJCAI'85}
+} 
+
+@misc{fengMonitoringLatentWorld2024,
+  title = {Monitoring {{Latent World States}} in {{Language Models}} with {{Propositional Probes}}},
+  author = {Feng, Jiahai and Russell, Stuart and Steinhardt, Jacob},
+  year = {2024},
+  month = jun,
+  number = {arXiv:2406.19501},
+  eprint = {2406.19501},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2406.19501},
+  urldate = {2024-07-22},
+  abstract = {Language models are susceptible to bias, sycophancy, backdoors, and other tendencies that lead to unfaithful responses to the input context. Interpreting internal states of language models could help monitor and correct unfaithful behavior. We hypothesize that language models represent their input contexts in a latent world model, and seek to extract this latent world state from the activations. We do so with 'propositional probes', which compositionally probe tokens for lexical information and bind them into logical propositions representing the world state. For example, given the input context ''Greg is a nurse. Laura is a physicist.'', we decode the propositions ''WorksAs(Greg, nurse)'' and ''WorksAs(Laura, physicist)'' from the model's activations. Key to this is identifying a 'binding subspace' in which bound tokens have high similarity (''Greg'' and ''nurse'') but unbound ones do not (''Greg'' and ''physicist''). We validate propositional probes in a closed-world setting with finitely many predicates and properties. Despite being trained on simple templated contexts, propositional probes generalize to contexts rewritten as short stories and translated to Spanish. Moreover, we find that in three settings where language models respond unfaithfully to the input context -- prompt injections, backdoor attacks, and gender bias -- the decoded propositions remain faithful. This suggests that language models often encode a faithful world model but decode it unfaithfully, which motivates the search for better interpretability tools for monitoring LMs.},
+  archiveprefix = {arXiv},
+}
+
+@misc{davies2023discoveringvariablebindingcircuitry,
+      title={Discovering Variable Binding Circuitry with Desiderata}, 
+      author={Xander Davies and Max Nadeau and Nikhil Prakash and Tamar Rott Shaham and David Bau},
+      year={2023},
+      eprint={2307.03637},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2307.03637}, 
+}
+
+@inproceedings{Feng2024,
+  author       = {Jiahai Feng and
+                  Jacob Steinhardt},
+  title        = {How do Language Models Bind Entities in Context?},
+  booktitle    = {The Twelfth International Conference on Learning Representations,
+                  {ICLR} 2024, Vienna, Austria, May 7-11, 2024},
+  publisher    = {OpenReview.net},
+  year         = {2024},
+  url          = {https://openreview.net/forum?id=zb3b6oKO77},
+  timestamp    = {Wed, 07 Aug 2024 17:11:53 +0200},
+  biburl       = {https://dblp.org/rec/conf/iclr/FengS24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@article{alhama:2019,
+	Author = {Alhama, Raquel G and Zuidema, Willem},
+	Journal = {Psychonomic bulletin \& review},
+	Number = {4},
+	Pages = {1174--1194},
+	Publisher = {Springer},
+	Title = {A review of computational models of basic rule learning: The neural-symbolic debate and beyond},
+	Volume = {26},
+	Year = {2019}}
+ 
+
+@article{marcus:1999,
+	Author = {Marcus, Gary F and Vijayan, Sugumaran and Rao, S Bandi and Vishton, Peter M},
+	Journal = {Science},
+	Number = {5398},
+	Pages = {77--80},
+	Publisher = {American Association for the Advancement of Science},
+	Title = {Rule learning by seven-month-old infants},
+	Volume = {283},
+	Year = {1999}}
+
+@article{Smolensky1990-TensorProductVariableBinding,
+  author    = {Paul Smolensky},
+  title     = {Tensor Product Variable Binding and the Representation of Symbolic Structures in Connectionist Systems},
+  journal   = {Artificial Intelligence},
+  volume    = {46},
+  number    = {1-2},
+  pages     = {159--216},
+  year      = {1990},
+  doi       = {10.1016/0004-3702(90)90007-M}
+}
+
+
+@article{greff2020binding,
+  title={On the binding problem in artificial neural networks},
+  author={Greff, Klaus and Van Steenkiste, Sjoerd and Schmidhuber, J{\"u}rgen},
+  journal={arXiv preprint arXiv:2012.05208},
+  year={2020}
+}
+
+@inproceedings{
+feng2024how,
+title={How do Language Models Bind Entities in Context?},
+author={Jiahai Feng and Jacob Steinhardt},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=zb3b6oKO77}
+}
+
+@inproceedings{dai-etal-2024-representational,
+    title = "Representational Analysis of Binding in Language Models",
+    author = "Dai, Qin  and
+      Heinzerling, Benjamin  and
+      Inui, Kentaro",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.967/",
+    doi = "10.18653/v1/2024.emnlp-main.967",
+    pages = "17468--17493",
+    abstract = "Entity tracking is essential for complex reasoning. To perform in-context entity tracking, language models (LMs) must bind an entity to its attribute (e.g., bind a container to its content) to recall attribute for a given entity. For example, given a context mentioning ``The coffee is in Box Z, the stone is in Box M, the map is in Box H'', to infer ``Box Z contains the coffee'' later, LMs must bind ``Box Z'' to ``coffee''. To explain the binding behaviour of LMs, existing research introduces a Binding ID mechanism and states that LMs use a abstract concept called Binding ID (BI) to internally mark entity-attribute pairs. However, they have not directly captured the BI information from entity activations. In this work, we provide a novel view of the Binding ID mechanism by localizing the BI information. Specifically, we discover that there exists a low-rank subspace in the hidden state (or activation) of LMs, that primarily encodes BIs. To identify this subspace, we take principle component analysis as our first attempt and it is empirically proven to be effective. Moreover, we also discover that when editing representations along directions in the subspace, LMs tend to bind a given entity to other attributes accordingly. For example, by patching activations along the BI encoding direction we can make the LM to infer ``Box Z contains the stone'' and ``Box Z contains the map''."
+}
+
+@misc{janik2024aspectshumanmemorylarge,
+      title={Aspects of human memory and Large Language Models}, 
+      author={Romuald A. Janik},
+      year={2024},
+      eprint={2311.03839},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2311.03839}, 
+}
+
+@inproceedings{finlayson-etal-2021-causal,
+    title = "Causal Analysis of Syntactic Agreement Mechanisms in Neural Language Models",
+    author = "Finlayson, Matthew  and
+      Mueller, Aaron  and
+      Gehrmann, Sebastian  and
+      Shieber, Stuart  and
+      Linzen, Tal  and
+      Belinkov, Yonatan",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.144/",
+    doi = "10.18653/v1/2021.acl-long.144",
+    pages = "1828--1843",
+    abstract = "Targeted syntactic evaluations have demonstrated the ability of language models to perform subject-verb agreement given difficult contexts. To elucidate the mechanisms by which the models accomplish this behavior, this study applies causal mediation analysis to pre-trained neural language models. We investigate the magnitude of models' preferences for grammatical inflections, as well as whether neurons process subject-verb agreement similarly across sentences with different syntactic structures. We uncover similarities and differences across architectures and model sizes{---}notably, that larger models do not necessarily learn stronger preferences. We also observe two distinct mechanisms for producing subject-verb agreement depending on the syntactic structure of the input sentence. Finally, we find that language models rely on similar sets of neurons when given sentences with similar syntactic structure."
+}
+
+@inproceedings{geva-etal-2023-dissecting,
+    title = "Dissecting Recall of Factual Associations in Auto-Regressive Language Models",
+    author = "Geva, Mor  and
+      Bastings, Jasmijn  and
+      Filippova, Katja  and
+      Globerson, Amir",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.751/",
+    doi = "10.18653/v1/2023.emnlp-main.751",
+    pages = "12216--12235",
+    abstract = "Transformer-based language models (LMs) are known to capture factual knowledge in their parameters. While previous work looked into where factual associations are stored, only little is known about how they are retrieved internally during inference. We investigate this question through the lens of information flow. Given a subject-relation query, we study how the model aggregates information about the subject and relation to predict the correct attribute. With interventions on attention edges, we first identify two critical points where information propagates to the prediction: one from the relation positions followed by another from the subject positions. Next, by analyzing the information at these points, we unveil a three-step internal mechanism for attribute extraction. First, the representation at the last-subject position goes through an enrichment process, driven by the early MLP sublayers, to encode many subject-related attributes. Second, information from the relation propagates to the prediction. Third, the prediction representation ``queries'' the enriched subject to extract the attribute. Perhaps surprisingly, this extraction is typically done via attention heads, which often encode subject-attribute mappings in their parameters. Overall, our findings introduce a comprehensive view of how factual associations are stored and extracted internally in LMs, facilitating future research on knowledge localization and editing."
+}
+
+@article{vig2020investigating,
+  title={Investigating gender bias in language models using causal mediation analysis},
+  author={Vig, Jesse and Gehrmann, Sebastian and Belinkov, Yonatan and Qian, Sharon and Nevo, Daniel and Singer, Yaron and Shieber, Stuart},
+  journal={Advances in neural information processing systems},
+  volume={33},
+  pages={12388--12401},
+  year={2020}
+}
+
+@InProceedings{pmlr-v115-beckers20a,
+  title = 	 {Approximate Causal Abstractions},
+  author =       {Beckers, Sander and Eberhardt, Frederick and Halpern, Joseph Y.},
+  booktitle = 	 {Proceedings of The 35th Uncertainty in Artificial Intelligence Conference},
+  pages = 	 {606--615},
+  year = 	 {2020},
+  editor = 	 {Adams, Ryan P. and Gogate, Vibhav},
+  volume = 	 {115},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {22--25 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v115/beckers20a/beckers20a.pdf},
+  url = 	 {https://proceedings.mlr.press/v115/beckers20a.html},
+  abstract = 	 {Scientific models describe natural phenomena at different levels of abstraction. Abstract descriptions can provide the basis for interventions on the system and explanation of observed phenomena at a level of granularity that is coarser than the most fundamental account of the system. Beckers and Halpern (2019), building on prior work of Rubinstein et al. (2017), developed an account of abstraction for causal models that is exact. Here we extend this account to the more realistic case where an abstract causal model only offers an approximation of the underlying system. We show how the resulting account handles the discrepancy that can arise between low- and high-level causal models of the same system, and in the process provide an account of how one causal model approximates another, a topic of independent interest. Finally, we extend the account of approximate abstractions to probabilistic causal models, indicating how and where uncertainty can enter into an approximate abstraction.}
+}
+
+@inproceedings{geiger2022inducing,
+  title={Inducing causal structure for interpretable neural networks},
+  author={Geiger, Atticus and Wu, Zhengxuan and Lu, Hanson and Rozner, Josh and Kreiss, Elisa and Icard, Thomas and Goodman, Noah and Potts, Christopher},
+  booktitle={International Conference on Machine Learning},
+  pages={7324--7338},
+  year={2022},
+  organization={PMLR}
+}
+
+@inproceedings{
+kaplan2025from,
+title={From Tokens to Words: On the Inner Lexicon of {LLM}s},
+author={Guy Kaplan and Matanel Oren and Yuval Reif and Roy Schwartz},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=328vch6tRs}
+}
+
+@inproceedings{cao-etal-2025-specializing,
+    title = "Specializing Large Language Models to Simulate Survey Response Distributions for Global Populations",
+    author = {Cao, Yong  and
+      Liu, Haijiang  and
+      Arora, Arnav  and
+      Augenstein, Isabelle  and
+      R{\"o}ttger, Paul  and
+      Hershcovich, Daniel},
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.162/",
+    doi = "10.18653/v1/2025.naacl-long.162",
+    pages = "3141--3154",
+    ISBN = "979-8-89176-189-6",
+    abstract = "Large-scale surveys are essential tools for informing social science research and policy, but running surveys is costly and time-intensive. If we could accurately simulate group-level survey results, this would therefore be very valuable to social science research. Prior work has explored the use of large language models (LLMs) for simulating human behaviors, mostly through prompting. In this paper, we are the first to specialize LLMs for the task of simulating survey response distributions. As a testbed, we use country-level results from two global cultural surveys. We devise a fine-tuning method based on first-token probabilities to minimize divergence between predicted and actual response distributions for a given question. Then, we show that this method substantially outperforms other methods and zero-shot classifiers, even on unseen questions, countries, and a completely unseen survey. While even our best models struggle with the task, especially on unseen questions, our results demonstrate the benefits of specialization for simulation, which may accelerate progress towards sufficiently accurate simulation in the future."
+}
+
+@inproceedings{fothergill2016evaluating,
+  title={Evaluating a topic modelling approach to measuring corpus similarity},
+  author={Fothergill, Richard and Cook, Paul and Baldwin, Timothy},
+  booktitle={Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC'16)},
+  pages={273--279},
+  year={2016}
+}
+
+@article{Feucht2024TokenEA,
+  title={Token Erasure as a Footprint of Implicit Vocabulary Items in LLMs},
+  author={Sheridan Feucht and David Atkinson and Byron C. Wallace and David Bau},
+  journal={ArXiv},
+  year={2024},
+  volume={abs/2406.20086},
+  url={https://api.semanticscholar.org/CorpusID:270845496}
+}
+
+@inproceedings{beckers2019abstracting,
+  title={Abstracting causal models},
+  author={Beckers, Sander and Halpern, Joseph Y},
+  booktitle={Proceedings of the aaai conference on artificial intelligence},
+  volume={33},
+  pages={2678--2685},
+  year={2019}
+}
+
+@inproceedings{
+geiger2021causal,
+title={Causal Abstractions of Neural Networks},
+author={Atticus Geiger and Hanson Lu and Thomas F Icard and Christopher Potts},
+booktitle={Advances in Neural Information Processing Systems},
+editor={A. Beygelzimer and Y. Dauphin and P. Liang and J. Wortman Vaughan},
+year={2021},
+url={https://openreview.net/forum?id=RmuXDtjDhG}
+}
+
+@article{liu-etal-2024-lost,
+    title = "Lost in the Middle: How Language Models Use Long Contexts",
+    author = "Liu, Nelson F.  and
+      Lin, Kevin  and
+      Hewitt, John  and
+      Paranjape, Ashwin  and
+      Bevilacqua, Michele  and
+      Petroni, Fabio  and
+      Liang, Percy",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "12",
+    year = "2024",
+    address = "Cambridge, MA",
+    publisher = "MIT Press",
+    url = "https://aclanthology.org/2024.tacl-1.9/",
+    doi = "10.1162/tacl_a_00638",
+    pages = "157--173",
+    abstract = "While recent language models have the ability to take long contexts as input, relatively little is known about how well they use longer context. We analyze the performance of language models on two tasks that require identifying relevant information in their input contexts: multi-document question answering and key-value retrieval. We find that performance can degrade significantly when changing the position of relevant information, indicating that current language models do not robustly make use of information in long input contexts. In particular, we observe that performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must access relevant information in the middle of long contexts, even for explicitly long-context models. Our analysis provides a better understanding of how language models use their input context and provides new evaluation protocols for future long-context language models."
+}
+
+@misc{prakash2025languagemodelsuselookbacks,
+      title={Language Models use Lookbacks to Track Beliefs}, 
+      author={Nikhil Prakash and Natalie Shapira and Arnab Sen Sharma and Christoph Riedl and Yonatan Belinkov and Tamar Rott Shaham and David Bau and Atticus Geiger},
+      year={2025},
+      eprint={2505.14685},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.14685}, 
+}
+
+@inproceedings{
+prakash2024finetuning,
+title={Fine-Tuning Enhances Existing Mechanisms: A Case Study on Entity Tracking},
+author={Nikhil Prakash and Tamar Rott Shaham and Tal Haklay and Yonatan Belinkov and David Bau},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=8sKcAWOf2D}
+}
+
+@article{roskies1999binding,
+  title={The binding problem},
+  author={Roskies, Adina L},
+  journal={Neuron},
+  volume={24},
+  number={1},
+  pages={7--9},
+  year={1999},
+  publisher={Elsevier}
+}
+
+@article{treisman1996binding,
+  title={The binding problem},
+  author={Treisman, Anne},
+  journal={Current opinion in neurobiology},
+  volume={6},
+  number={2},
+  pages={171--178},
+  year={1996},
+  publisher={Elsevier}
+}
+
+@book{rosenblatt1962principles,
+  title={Principles of neurodynamics: Perceptrons and the theory of brain mechanisms},
+  author={Rosenblatt, Frank and others},
+  volume={55},
+  year={1962},
+  publisher={Spartan books Washington, DC}
+}
+
+@incollection{von1994correlation,
+  title={The correlation theory of brain function},
+  author={Von Der Malsburg, Christoph},
+  booktitle={Models of neural networks: Temporal aspects of coding and information processing in biological systems},
+  pages={95--119},
+  year={1994},
+  publisher={Springer}
+}
+
+@inproceedings{levy-etal-2024-task,
+    title = "Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models",
+    author = "Levy, Mosh  and
+      Jacoby, Alon  and
+      Goldberg, Yoav",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.818/",
+    doi = "10.18653/v1/2024.acl-long.818",
+    pages = "15339--15353"
+}
