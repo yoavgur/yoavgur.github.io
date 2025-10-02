@@ -38,8 +38,20 @@ thumbnail: assets/img/binding.png
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 
 ---
+<d-contents>
+  <nav class="l-text figcaption">
+    <h3>Contents</h3>
+    <div><a href="#introduction">Introduction</a></div>
+    <div><a href="#three-mechanisms">Three Mechanisms For Binding and Retrieval</a></div>
+    <div><a href="#results-and-analyses">Results and Analyses</a></div>
+    <div><a href="#causal-model">A Simple Model for Simulating Entity Retrieval In-Context</a></div>
+    <div><a href="#free-form">Introducing Free Form Text Into the Task</a></div>
+    <div><a href="#conclusion">Conclusion</a></div>
+    <div><a href="#interactive">Interactive Figure</a></div>
+  </nav>
+</d-contents>
 
-**TL;DR**: Language models use three mechanisms for binding and retrieving entities in context: **positional**, **lexical** and **reflexive**. When they point at the same entity the model answers decisively, but when we split them, we see how the model uses them independently.
+<strong>TL;DR</strong>: Entity binding in LMs is crucial for reasoning in LMs. Prior work established a <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism underlying binding, but we find that it breaks down in complex settings. We uncover two additional mechanisms—<mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark>—that drive model behavior.
 
 <a href="#interactive">Jump to the interactive demo below</a>
 
@@ -89,7 +101,8 @@ In this post we describe exactly how LMs use the positional, lexical and reflexi
   </figcaption>
 </figure>
 
-### Three Mechanisms For Binding and Retrieval
+
+<h3 id="#three-mechanisms">Three Mechanisms For Binding and Retrieval</h3>
 The prevailing view is that entities are bound and retrieved with a <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism <d-cite key="dai-etal-2024-representational"></d-cite><d-cite key="prakash2024finetuning"></d-cite><d-cite key="prakash2025languagemodelsuselookbacks"></d-cite>.
 However, since this mechanism fails to explain model behavior in more complex settings, we propose and test two alternatives for how LMs might implement binding. To do this, we design datasets with pairs of original and counterfactual inputs, such that each of the three proposed mechanisms makes distinct predictions under an interchange intervention with the pair. This is illustrated in Figure&nbsp;<a href="#figure-2">2</a>.
 Our three hopythesized mechanisms are:
@@ -112,7 +125,7 @@ Our three hopythesized mechanisms are:
 </figure>
 
 
-### Results and Analyses
+<h3 id="results-and-analyses">Results and Analyses</h3>
 In Figure&nbsp;<a href="#figure-3">3</a>, we see the results of our interchange interventions for gemma-2-2b-it (replicated for all other models in the paper). We also collect the mean output probabilities for each possible answer entity post patching, highlighting the entities pointed to by each of the mechanisms, to understand the interplay between the three mechanisms.
 
 #### The Positional Mechanism is Weak and Diffuse in Middle Positions
@@ -180,11 +193,14 @@ We see in Figure&nbsp;<a href="#figure-5">5</a> that, contrary to the <mark styl
   Figure 5: The positional signal is stronger when there are few entities, and overpowers the other mechanisms.
 </figcaption> -->
 
-
-### A Simple Model for Simulating Entity Retrieval In-Context
+<h3 id="causal-model">A Simple Model for Simulating Entity Retrieval In-Context</h3>
 To formalize out observations about the dynamics between the three mechanisms and the position of the queried entity, we develop a high-level causal model<d-cite key="geiger2021causal"></d-cite> that approximates LM logits for next token prediction. We formalize this as a position-weighted mixture of terms for the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark>, <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms. In accordance with the results in Figure&nbsp;<a href="#figure-5">5</a>, we model the <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms as one-hot distributions that up-weight only entities pointed to by those mechanisms, while the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism is modeled as a gaussian distribution scaled by a single weight, with a standard deviation that is a quadratic function of the positional index. Formally:
 
-$$Y_i := \underbrace{w_{\mathrm{pos}} \cdot \mathcal{N}\left(i \mid i_P, \sigma(i_P)^2\right)}_{\text{positional mechanism}} + \underbrace{w_{\mathrm{lex}}\!\left[i_L\right]\cdot \mathbf{1}\!\left\{i = i_L\right\}}_{\text{lexical mechanism}} + \underbrace{w_{\mathrm{ref}}\!\left[i_R\right]\cdot \mathbf{1}\{i=i_R\}}_{\text{reflexive mechanism}}$$
+<div style="overflow-x:auto;">
+$$Y_i := \underbrace{w_{\mathrm{pos}} \cdot \mathcal{N}\left(i \mid i_P, \sigma(i_P)^2\right)}_{\text{positional mechanism}} 
++ \underbrace{w_{\mathrm{lex}}\!\left[i_L\right]\cdot \mathbf{1}\!\left\{i = i_L\right\}}_{\text{lexical mechanism}} 
++ \underbrace{w_{\mathrm{ref}}\!\left[i_R\right]\cdot \mathbf{1}\{i=i_R\}}_{\text{reflexive mechanism}}$$
+</div>
 
 Where $i_{P/L/R}$ are the entity group indices pointed by the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark>, <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms respectively, and $\sigma(i_P) = \alpha (\frac{i_P}{n})^2 + \beta \frac{i_P}{n} + \gamma$. We learn $w_{pos},w_{lex},w_{ref},\alpha, \beta, \gamma$ from data.
 
@@ -192,13 +208,14 @@ To train and evaluate our model, we collect the logit distributions per index co
 
 
 <figure id="table-1" style="width:100%;">
+  <div style="overflow-x:auto;">
   <table style="width:100%; border-collapse:collapse;">
     <thead>
       <tr>
         <th style="text-align:left;"><strong>Model</strong></th>
-        <th style="text-align:center;"><strong>JSS ↑ ($t_e=1$)</strong></th>
-        <th style="text-align:center;"><strong>JSS ↑ ($t_e=2$)</strong></th>
-        <th style="text-align:center;"><strong>JSS ↑ ($t_e=3$)</strong></th>
+        <th style="text-align:center;"><strong>JSS ↑ $(t_e=1)$</strong></th>
+        <th style="text-align:center;"><strong>JSS ↑ $(t_e=2)$</strong></th>
+        <th style="text-align:center;"><strong>JSS ↑ $(t_e=3)$</strong></th>
       </tr>
     </thead>
     <tbody>
@@ -275,6 +292,7 @@ To train and evaluate our model, we collect the logit distributions per index co
       </tr>
     </tbody>
   </table>
+  </div>
   <figcaption style="font-size: 0.9em; color: #6c757d; margin-top: 0.5rem;">
     <strong>Table 1:</strong> Jensen-Shannon similarity (JSS) results for training our full model $\mathcal{M}$, in addition to variants, baselines and ablations. We show results for $t_e \in [3]$, i.e. when querying the first, second and third entities in an entity group, respectively.
   </figcaption>
@@ -285,7 +303,7 @@ To train and evaluate our model, we collect the logit distributions per index co
 We see in Table&nbsp;<a href="#table-1">1</a> that our model achieves near perfect results (0.95), only slightly below the oracle variant (0.97). We also see that the model representing the prevailing view achieves much worse results (0.44), well below even a uniform distribution (0.5). We can also see when each component of our model is important for modeling the LM's behavior: when querying the first entity in a group, the <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> mechanism is not crucial for modeling the LM's behavior, while when querying the third entity the <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> one isn't, in line with our hypothesis.
 
 
-### Introducing Free Form Text Into the Task
+<h3 id="free-form">Introducing Free Form Text Into the Task</h3>
 To test our model's generalization to more realistic inputs, we modify our binding tasks such that they include filler sentences between each entity group. To this end, we create 1,000 filler sentences that are "entity-less", meaning they do not contain sequences that signal the need to track or bind entities, e.g. "Ann loves ale, *this is a known fact*, Joe loves jam, *this logic is easy to follow*...". This enables us to evaluate entity binding in a more naturalistic setting, containing much more noise and longer sequences. We evaluate different levels of padding by interleaving the entity groups with an increasing number of filler sentences, for a maximum of 500 tokens between each entity group.
 
 <figure id="figure-6" style="display: flex; flex-direction: column; align-items: center; border: none; margin: 0; padding: 0;">
@@ -314,7 +332,7 @@ The results, shown in Figure&nbsp;<a href="#figure-6">6</a> and&nbsp;<a href="#f
   </figcaption>
 </figure>
 
-### Conclusion
+<h3 id="conclusion">Conclusion</h3>
 In this paper, we challenge the prevailing view that LMs retrieve bound entities purely with a <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism. We find that while the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism is effective for entities introduced at the beginning or end of context, it becomes diffuse and unreliable in the middle. We show that in practice, LMs rely on a mixture of three mechanisms: <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark>, <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark>, and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark>. The lexical and reflexive mechanisms provide sharper signals that enable the model to correctly bind and retrieve entities throughout. We validate our findings across 9 models ranging from 2-72B, and 10 binding tasks, establishing a general account of how LMs retrieve bound entities.
 
 ---
@@ -331,7 +349,12 @@ Here we provide an interactive figure, showing the mean output probabilities (ge
 </figure>
 
 
+---
 
+Please cite this as:
+```bibtex
+TODO
+```
 
 
 <link rel="stylesheet" href="{{ '/assets/css/binding-demo/index-BEOe_g9O.css' | relative_url }}">
