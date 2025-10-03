@@ -150,7 +150,7 @@ In Figure&nbsp;<a href="#figure-4">4</a> we see the mean probabilities for each 
      data-animation-sequence='[{"iP":1,"delay":1500},{"iP":2,"delay":1500},{"iP":3,"delay":1500},{"iP":4,"delay":1500},{"iP":5,"delay":1500},{"iP":6,"delay":1500},{"iP":7,"delay":1500},{"iP":8,"delay":1500},{"iP":9,"delay":1500},{"iP":10,"delay":1500}]'>
 </div>
 <figcaption style="font-size: 0.9em; color: #6c757d; margin-top: 0.5rem;">
-  <strong>Figure 4</strong>: Mean probabilities for all answer entities, fixing the <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms to point to the first entity, and sliding the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism across all values.
+  <strong>Figure 4</strong>: Mean probabilities for all answer entities, fixing the <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms to point to the first entity, and sliding the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism across all values. We see that in early and late entity groups the positional mechanism induces a strong concentrated distribution, while for middle ones it becomes weak and diffuse, rendering it less robust.
 </figcaption>
 </figure>
 
@@ -173,7 +173,7 @@ We see in Figure&nbsp;<a href="#figure-5">5</a> that, contrary to the <mark styl
 </div>
 
 <figcaption style="font-size: 0.9em; color: #6c757d; margin-top: 0.5rem;">
-  <strong>Figure 5</strong>: Interaction between the different mechanisms. We fix the entity pointed to by the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism, and slide the <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms.
+  <strong>Figure 5</strong>: Interaction between the different mechanisms. We fix the entity pointed to by the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism, and slide the <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms. We see that the latter two induce one-hot distributions, and interact with each other and the positional mechanism in additive and suppressive ways.
 </figcaption>
 </figure>
 
