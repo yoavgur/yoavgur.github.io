@@ -27,7 +27,10 @@ authors:
 
 
 bibliography: 2025-09-29-mixing-mechs.bib
-
+image: https://yoav.ml/assets/img/binding.png
+og_image: https://yoav.ml/assets/img/binding.png
+twitter_image: https://yoav.ml/assets/img/binding.png
+twitter_card: summary_large_image
 thumbnail: assets/img/binding.png
 
 # Optionally, you can add a table of contents to your post.
