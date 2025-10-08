@@ -1,6 +1,23 @@
 ---
 ---
 
+@misc{gurarieh2025mixingmechanismslanguagemodels,
+      title={Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context}, 
+      author={Yoav Gur-Arieh and Mor Geva and Atticus Geiger},
+      year={2025},
+      eprint={2510.06182},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.06182}, 
+      preview={binding.gif},
+      bibtex_show={true},
+      pdf={https://arxiv.org/pdf/2510.06182},
+      code={https://github.com/yoavgur/mixing-mechs},
+      selected={true},
+      html={https://arxiv.org/html/2510.06182v1},
+      abstract={A key component of in-context reasoning is the ability of language models (LMs) to bind entities for later retrieval. For example, an LM might represent "Ann loves pie" by binding "Ann" to "pie", allowing it to later retrieve "Ann" when asked "Who loves pie?" Prior research on short lists of bound entities found strong evidence that LMs implement such retrieval via a positional mechanism, where "Ann" is retrieved based on its position in context. In this work, we find that this mechanism generalizes poorly to more complex settings; as the number of bound entities in context increases, the positional mechanism becomes noisy and unreliable in middle positions. To compensate for this, we find that LMs supplement the positional mechanism with a lexical mechanism (retrieving "Ann" using its bound counterpart "pie") and a reflexive mechanism (retrieving "Ann" through a direct pointer). Through extensive experiments on nine models and ten binding tasks, we uncover a consistent pattern in how LMs mix these mechanisms to drive model behavior. We leverage these insights to develop a causal model combining all three mechanisms that estimates next token distributions with 95% agreement. Finally, we show that our model generalizes to substantially longer inputs of open-ended text interleaved with entity groups, further demonstrating the robustness of our findings in more natural settings. Overall, our study establishes a more complete picture of how LMs bind and retrieve entities in-context.},
+}
+
 @misc{gottesman2025lmentsuiteanalyzingknowledge,
       title={LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations}, 
       author={Daniela Gottesman and Alon Gilae-Dotan and Ido Cohen and Yoav Gur-Arieh and Marius Mosbach and Ori Yoran and Mor Geva},

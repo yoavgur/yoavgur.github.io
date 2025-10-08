@@ -56,7 +56,7 @@ thumbnail: assets/img/binding.png
 
 <strong>TL;DR</strong>: Entity binding in LMs is crucial for reasoning in LMs. Prior work established a <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark> mechanism underlying binding, but we find that it breaks down in complex settings. We uncover two additional mechanisms—<mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark>—that drive model behavior.
 
-<a href="#interactive">Jump to the interactive demo below</a>
+<a href="#interactive">Jump to the interactive demo below</a>, or read the full paper <a href="https://arxiv.org/abs/2510.06182">here</a>.
 
 <figure style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto;">
   <div 
@@ -345,7 +345,7 @@ In our work, we challenge the prevailing view that LMs retrieve bound entities p
 ---
 <h3 id="interactive" style="scroll-margin-top: 80px;"> Interactive Figure </h3>
 
-Here we provide an interactive figure, showing the mean output probabilities (gemma-2-2b-it) over the possible answer entities contingent on which entities are pointed to by the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark>, <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms (pos, lex and ref respectively). You can control the number of entity groups in the context (n), as well as which entity in a group is queried (target). See the <a href="#introduction">full blog post</a> or our paper to understand more about how LMs perform binding and retrieval.
+Here we provide an interactive figure, showing the mean output probabilities (gemma-2-2b-it) over the possible answer entities contingent on which entities are pointed to by the <mark style="background:rgb(214, 232, 252); color: #2e73b3ff; padding: 0.1em 0.3em; border-radius: 0.2em;"><b>positional</b></mark>, <mark style="background:rgb(203, 232, 221); color:rgb(26, 147, 98); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>lexical</b></mark> and <mark style="background:rgb(255, 231, 203); color:rgb(252, 156, 46); padding: 0.1em 0.3em; border-radius: 0.2em;"><b>reflexive</b></mark> mechanisms (pos, lex and ref respectively). You can control the number of entity groups in the context (n), as well as which entity in a group is queried (target). See the <a href="#introduction">full blog post</a> or our <a href="https://arxiv.org/abs/2510.06182">paper</a> to understand more about how LMs perform binding and retrieval.
 
 
 <figure>
@@ -358,9 +358,16 @@ Here we provide an interactive figure, showing the mean output probabilities (ge
 
 ---
 
-Please cite this as:
+Please cite as:
 ```bibtex
-TODO
+@misc{gurarieh2025mixing,
+    title={Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context},
+    author={Yoav Gur-Arieh and Mor Geva and Atticus Geiger},
+    year={2025},
+    eprint={2510.06182},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
 ```
 
 
