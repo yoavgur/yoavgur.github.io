@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-mixing-mechanisms-how-language-models-retrieve-bound-entities-in-context",
+        },{id: "post-are-we-evaluating-cot-faithfulness-correctly",
+      
+        title: "Are We Evaluating CoT Faithfulness Correctly?",
+      
+      description: "Faithfulness evaluations mistake faithfulness for plausibility and importance, or lack a clear theoretical foundation.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/on-cot-faithfulness/";
+        
+      },
+    },{id: "post-mixing-mechanisms-how-language-models-retrieve-bound-entities-in-context",
       
         title: "Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context",
       
