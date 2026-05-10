@@ -10,7 +10,7 @@ pretty_table: false
 citation: true
 
 authors:
-  - name: Yoav Gur Arieh
+  - name: Yoav Gur-Arieh
     url: "https://yoav.ml"
     affiliations:
       name: Tel Aviv University
