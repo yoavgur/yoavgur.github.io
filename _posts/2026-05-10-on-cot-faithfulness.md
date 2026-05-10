@@ -104,3 +104,6 @@ As shown in Figure&nbsp;<a href="#faith_v_imp">3</a>, a step could be causally i
 <br />
 
 As an example of this conflation, many metrics that attempt to evaluate the faithfulness of CoTs do so by perturbing individual CoT steps and seeing whether those have an effect on the model's output <d-cite key="lanham2023measuringfaithfulnesschainofthoughtreasoning"/>. Other works conflate faithfulness with importance by showing that model's answers are frequently unaffected by the progressive truncation of their CoTs, claiming this proves that the model is exhibiting *unfaithful post-hoc reasoning*, where the model reaches a conclusion early on but pretends to reason towards it. This phenomena however could also be explained by the model only needing a few forward passes to reach its conclusion, while verbalizing this process accurately over the course of more tokens, or even evaluating different directions and concluding that its initial approach was correct.
+
+### Conclusion
+TODO
