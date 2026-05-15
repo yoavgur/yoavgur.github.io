@@ -1,5 +1,6 @@
 ---
 layout: distill
+published: false
 title: Are We Evaluating CoT Faithfulness Correctly?
 description: Faithfulness evaluations mistake faithfulness for plausibility and importance, or lack a clear theoretical foundation.
 tags: Faithfulness Reasoning CoT Interpretability AI ML
@@ -70,7 +71,6 @@ The crux is this: plausibility asks whether a CoT *makes sense* to a human reade
 
 Recent benchmarks illustrate the conflation in practice. FaithCoT-Bench<d-cite key="shen2026faithcotbench"/> labels CoTs as unfaithful when annotators judge the reasoning path implausible or wrong. In one of their appendix examples (Figure&nbsp;<a href="#faithcot_example">2</a>), the model is asked "*What did 'coma' originally stand for?*" and answers correctly, grounding its response in the fact that *coma* derives from the Greek κῶμα. The annotators marked this reasoning as unfaithful, but their justification turns on the perceived logical structure of the argument, not on any evidence that the model did or did not actually perform the steps it describes.
 
-A second example comes from Arcuschin et al.<d-cite key="arcuschin2025chainofthought"/>, who detect unfaithfulness by generating CoTs for pairs of logically equivalent questions ("Is X south of Y?" vs. "Is Y south of X?") and flagging cases where the model produces contradictory reasoning across the pair. This rests on a determinism assumption that LLMs do not satisfy: even meaning-preserving changes to a prompt --- different wordings, different templates, different orderings --- can produce strikingly different outputs and trace through different internal computations<d-cite key="sclar2024quantifying, mizrahi-etal-2024-state"/>. The two CoTs are genuinely contradictory, but, as the authors themselves acknowledge, both could still faithfully describe what the model did on each respective forward pass.
 
 <figure id="faithcot_example" class="l-gutter">
   <a href="{{ '/assets/img/faithcot_coma_example.png' | relative_url }}" target="_blank">
@@ -82,6 +82,8 @@ A second example comes from Arcuschin et al.<d-cite key="arcuschin2025chainoftho
     <strong>Figure 2</strong>: An example from FaithCoT-Bench labeled as unfaithful since its CoT was judged to be implausible. 
   </figcaption>
 </figure>
+
+A second example comes from Arcuschin et al.<d-cite key="arcuschin2025chainofthought"/>, who detect unfaithfulness by generating CoTs for pairs of logically equivalent questions ("Is X south of Y?" vs. "Is Y south of X?") and flagging cases where the model produces contradictory reasoning across the pair. This rests on a determinism assumption that LLMs do not satisfy: even meaning-preserving changes to a prompt --- different wordings, different templates, different orderings --- can produce strikingly different outputs and trace through different internal computations<d-cite key="sclar2024quantifying, mizrahi-etal-2024-state"/>. The two CoTs are genuinely contradictory, but, as the authors themselves acknowledge, both could still faithfully describe what the model did on each respective forward pass.
 
 <br />
 
@@ -106,6 +108,8 @@ As Figure&nbsp;<a href="#faith_v_imp">3</a> illustrates, a step can be causally 
 This conflation is built into many widely used metrics. A common family of methods evaluates faithfulness by perturbing individual CoT steps and checking whether the model's output changes<d-cite key="lanham2023measuringfaithfulnesschainofthoughtreasoning"/>. A related move shows that models' answers are often unaffected by progressive truncation of their CoTs, and concludes that the model is engaged in *unfaithful post-hoc reasoning* --- having reached its conclusion early and merely pretending to reason toward it. But the same observation has at least two innocent explanations: the model may only need a handful of forward passes to settle on its answer and then spend the remaining tokens accurately verbalizing that computation, or it may explore alternative directions and confirm that its initial approach was correct. In each case the truncated steps are not causally necessary, yet the full CoT can still faithfully describe a process the model actually performed.
 
 ### Where this leaves us
-Faithfulness is the property we care about when we want CoTs to underwrite oversight of models. Plausibility and importance are easier to measure, but neither is what the definition asks for, and neither is what a safety case can be built on. A method that confuses any of these properties will declare faithful CoTs unfaithful, declare unfaithful CoTs faithful, or some unhappy mixture of both --- exactly the failure modes that make a metric worse than no metric at all.
+TODO...
 
-None of this means faithfulness is unmeasurable, only that the field has yet to measure it. Getting there will require evaluations grounded in what the definition actually says: methods that compare a CoT against the computation the model actually performed, rather than against how convincing it looks or how much its individual steps matter to the answer. Until then, claims that a given CoT is or isn't faithful should be read with a heavy dose of skepticism --- often, what is being reported is something else entirely.
+<!-- Faithfulness is the property we care about when we want CoTs to underwrite oversight of models. Plausibility and importance are easier to measure, but neither is what the definition asks for, and neither is what a safety case can be built on. A method that confuses any of these properties will declare faithful CoTs unfaithful, declare unfaithful CoTs faithful, or some unhappy mixture of both --- exactly the failure modes that make a metric worse than no metric at all.
+
+None of this means faithfulness is unmeasurable, only that the field has yet to measure it. Getting there will require evaluations grounded in what the definition actually says: methods that compare a CoT against the computation the model actually performed, rather than against how convincing it looks or how much its individual steps matter to the answer. Until then, claims that a given CoT is or isn't faithful should be read with a heavy dose of skepticism --- often, what is being reported is something else entirely. -->
