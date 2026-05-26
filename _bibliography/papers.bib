@@ -1,6 +1,24 @@
 ---
 ---
 
+@misc{gurarieh2025mixingmechanismslanguagemodels,
+      title={Faithfulness Metrics Don't Measure Faithfulness: A Meta-Evaluation with Ground Truth}, 
+      author={Yoav Gur-Arieh and Ana Marasović and Mor Geva},
+      year={2026},
+      eprint={2605.25052},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2605.25052}, 
+
+      preview={bonafide.png},
+      bibtex_show={true},
+      pdf={https://arxiv.org/pdf/2605.25052},
+      code={https://github.com/yoavgur/BonaFide},
+      selected={true},
+      html={https://arxiv.org/html/2605.25052v1},
+      abstract={Chains of thought (CoTs) have become central in interpreting and auditing behaviors of large language models. Yet growing evidence suggests that these traces often fail to faithfully represent the computations behind a model's predictions. Several faithfulness metrics have been proposed, but whether they indeed measure faithfulness remains unknown. Answering this requires ground-truth labels, which are hard to obtain since internal computations are not directly observable. Consequently, most works proposing metrics report only absolute scores or comparisons to prior metrics, and the few existing benchmarks rely on proxies like plausibility or importance, properties orthogonal to faithfulness that can mislead about whether a CoT can be trusted. We address this challenge by constructing tasks whose outputs reveal which intermediate computations must have produced them, and developing an automated labeling pipeline that yields ground-truth faithfulness labels at both the step and CoT level. Building on this methodology, we present BonaFide, a benchmark of 3,066 labeled CoTs across 13 tasks and 10 models, and use it to conduct the first systematic evaluation of prominent faithfulness metrics. Our experiments show that most metrics perform near chance, exhibit strong prediction biases and degrade on longer CoTs. The best metric reaches only 0.70 AUROC at the CoT level while another reaches 0.59 at the step level, with neither transferring across settings, while entailing prohibitively high computational cost. Our results expose fundamental gaps in current faithfulness evaluation and call for the development of more reliable and efficient metrics.},
+}
+
 @misc{avrahamy2026disentanglingmlpneuronweights,
       title={Disentangling MLP Neuron Weights in Vocabulary Space}, 
       author={Asaf Avrahamy and Yoav Gur-Arieh and Mor Geva},
@@ -15,17 +33,19 @@
       abstract={Interpreting the information encoded in model weights remains a fundamental challenge in mechanistic interpretability. In this work, we introduce ROTATE (Rotation-Optimized Token Alignment in weighT spacE), a data-free method requiring no forward passes that disentangles MLP neurons directly in weight space. Our approach relies on a key statistical observation: neurons that encode coherent, monosemantic concepts exhibit high kurtosis when projected onto the model's vocabulary. By optimizing rotations of neuron weights to maximize their vocabulary-space kurtosis, our method recovers sparse, interpretable directions which we name vocabulary channels. Experiments on Llama-3.1-8B-Instruct and Gemma-2-2B-it demonstrate that ROTATE consistently recovers vocabulary channels that are faithful to the neuron's behavior. ablating individual channels selectively disables corresponding input activations or the promotion of specific concepts. Moreover, aggregating channel-level descriptions yields comprehensive neuron descriptions that outperform optimized activation-based baselines by 2-3x in head-to-head comparisons. By providing a data-free decomposition of neuron weights, ROTATE offers a scalable, fine-grained building block for interpreting LMs.}
 }
 
-@misc{gurarieh2025mixingmechanismslanguagemodels,
+
+@inproceedings{gurarieh2026mixing,
       title={Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context}, 
       author={Yoav Gur-Arieh and Mor Geva and Atticus Geiger},
       year={2025},
+      booktitle = {The Fourteenth International Conference on Learning Representations},
       eprint={2510.06182},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2510.06182}, 
+      url = {https://openreview.net/forum?id=UJ2UUjT2ko},
       preview={binding.gif},
       bibtex_show={true},
-      pdf={https://arxiv.org/pdf/2510.06182},
+      pdf={https://openreview.net/pdf?id=UJ2UUjT2ko},
       code={https://github.com/yoavgur/mixing-mechs},
       selected={true},
       abbr={ICLR},
@@ -45,6 +65,7 @@
       pdf={https://arxiv.org/pdf/2509.03405},
       selected={true},
       preview={lment_diagram.png},
+      abbr={TACL},
 }
 
 @inproceedings{gurarieh2025preciseinparameterconcepterasure,
