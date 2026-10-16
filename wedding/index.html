@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hagar &amp; Yoav</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1d36" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&amp;family=Frank+Ruhl+Libre:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f3f2f7;
+  --ink: #26233d;
+  --muted: #67637f;
+  --accent: #8a6a24;
+  --cloth: #e4e1ee;
+  --line: #c9c4d8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1d36;
+    --ink: #ece8f4;
+    --muted: #a6a1c2;
+    --accent: #e3bd6d;
+    --cloth: #272a4c;
+    --line: #44476f;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1.1875rem/1.7 "Frank Ruhl Libre", Georgia, serif;
+  padding: max(1.25rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(3rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+}
+main { max-width: 34em; margin: 0 auto; }
+
+/* The chuppah: cloth on a rod, poles running down either side of the names. */
+.chuppah { max-width: 24rem; margin: 0 auto; }
+.chuppah svg { display: block; width: 100%; height: 3.25rem; }
+.chuppah .cloth { fill: var(--cloth); stroke: var(--line); stroke-width: 1.5; }
+.chuppah .rod { stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; }
+.chuppah .poles {
+  border-left: 3px solid var(--line);
+  border-right: 3px solid var(--line);
+  padding: 1.5rem 1rem 2.25rem;
+}
+h1 {
+  margin: 0;
+  font: 400 clamp(2.5rem, 12vw, 3.5rem)/1.05 Bellefair, "Frank Ruhl Libre", serif;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+#locked { text-align: center; padding-top: 2.5rem; }
+.count {
+  margin: 0;
+  font: 400 clamp(3rem, 16vw, 4.75rem)/1 Bellefair, "Frank Ruhl Libre", serif;
+  white-space: nowrap;
+}
+.count .d { display: inline-block; width: 0.56em; text-align: center; }
+.count .c { display: inline-block; width: 0.3em; text-align: center; color: var(--muted); }
+.note { margin: 1rem 0 0; color: var(--muted); font-size: 1rem; }
+
+#vows { padding-top: 2.75rem; }
+#vows.arrive { animation: arrive 1.1s ease both; }
+@keyframes arrive { from { opacity: 0; transform: translateY(0.75rem); } to { opacity: 1; transform: none; } }
+
+.speech + .speech { margin-top: 3.5rem; }
+.speech h2 { margin: 0 0 0.75rem; font: inherit; }
+.speech h2 button {
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.speech h2 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+.name { display: block; font: 400 2.5rem/1.1 Bellefair, "Frank Ruhl Libre", serif; }
+.hint { display: block; margin-top: 0.3rem; font-size: 0.95rem; color: var(--accent); }
+
+/* Collapsed: the first lines sit under a veil. Opening lifts it. */
+.text {
+  position: relative;
+  max-height: 8.5em;
+  overflow: hidden;
+  filter: blur(5px);
+  opacity: 0.55;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: max-height 0.8s ease, filter 0.6s ease, opacity 0.6s ease;
+}
+.text::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 70%;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+.text.open { filter: none; opacity: 1; cursor: auto; user-select: text; -webkit-user-select: text; }
+.text.open::after { opacity: 0; }
+.text p { margin: 0 0 0.9em; }
+.text p.gap { margin-top: 1.8em; }
+.text ul { margin: 0 0 0.9em; padding: 0; list-style: none; }
+.text li { padding-left: 1.1em; text-indent: -1.1em; }
+.text li::before { content: "– "; color: var(--muted); }
+.text .sign { margin-top: 1.6em; }
+.he {
+  font-size: 0.85em;
+  color: var(--muted);
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #vows.arrive { animation: none; }
+  .text, .text::after { transition: none; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="chuppah">
+    <svg viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
+      <path class="cloth" vector-effect="non-scaling-stroke"
+        d="M1.5 9 H398.5 V15 Q349 46 299.5 18 Q250 46 200 18 Q150 46 100.5 18 Q51 46 1.5 15 Z"/>
+      <line class="rod" vector-effect="non-scaling-stroke" x1="1.5" y1="8" x2="398.5" y2="8"/>
+      <line vector-effect="non-scaling-stroke" x1="1.5" y1="8" x2="1.5" y2="60" stroke="var(--line)" stroke-width="3"/>
+      <line vector-effect="non-scaling-stroke" x1="398.5" y1="8" x2="398.5" y2="60" stroke="var(--line)" stroke-width="3"/>
+    </svg>
+    <div class="poles"><h1>Hagar &amp; Yoav</h1></div>
+  </header>
+
+  <section id="locked">
+    <p class="count" id="count" aria-hidden="true"></p>
+    <p class="note" id="note">Opens at 17:30 Israel time</p>
+  </section>
+
+  <section id="vows" hidden>
+    <article class="speech">
+      <h2><button type="button" aria-expanded="false" aria-controls="t-hagar"><span class="name">Hagar</span> <span class="hint">Tap to read</span></button></h2>
+      <div class="text" id="t-hagar" aria-hidden="true"></div>
+    </article>
+    <article class="speech">
+      <h2><button type="button" aria-expanded="false" aria-controls="t-yoav"><span class="name">Yoav</span> <span class="hint">Tap to read</span></button></h2>
+      <div class="text" id="t-yoav" aria-hidden="true"></div>
+    </article>
+  </section>
+  <noscript><p class="note" style="text-align:center">This page needs JavaScript.</p></noscript>
+</main>
+
+<script>
+(function () {
+  // 17:30 on 16 Oct 2026 in Israel (IDT, UTC+3). The server only publishes the
+  // text at that moment, so this clock is for the countdown, not the lock.
+  var OPEN_AT = Date.UTC(2026, 9, 16, 14, 30, 0);
+  var SRC = "https://server.yoav.ml/wedding/vows.json";
+
+  // Local testing only: ?src=file.json and ?in=<seconds until opening>.
+  var params = new URLSearchParams(location.search);
+  var skew = 0;
+  if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    if (params.get("src")) SRC = params.get("src");
+    if (params.has("in")) skew = (OPEN_AT - Date.now()) - Number(params.get("in")) * 1000;
+  }
+  function now() { return Date.now() + skew; }
+
+  var countEl = document.getElementById("count");
+  var noteEl = document.getElementById("note");
+  var loaded = false, inflight = false, nextPoll = 0, crossed = false;
+  // Only people who watched the countdown get the entrance animation.
+  var arrivedEarly = OPEN_AT - now() > 0;
+
+  function digits(s) {
+    return s.split("").map(function (ch) {
+      return ch === ":" ? '<span class="c">:</span>' : '<span class="d">' + ch + "</span>";
+    }).join("");
+  }
+  function renderCount(ms) {
+    var t = Math.ceil(ms / 1000);
+    var h = Math.floor(t / 3600), m = Math.floor(t / 60) % 60, s = t % 60;
+    var str = h + ":" + (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+    if (countEl.dataset.v !== str) { countEl.dataset.v = str; countEl.innerHTML = digits(str); }
+  }
+
+  function show(data) {
+    document.getElementById("t-hagar").innerHTML = data.hagar;
+    document.getElementById("t-yoav").innerHTML = data.yoav;
+    document.getElementById("locked").hidden = true;
+    var vows = document.getElementById("vows");
+    vows.hidden = false;
+    if (arrivedEarly) vows.classList.add("arrive");
+  }
+
+  function load() {
+    if (loaded || inflight) return;
+    inflight = true;
+    fetch(SRC, { cache: "no-store" }).then(function (r) {
+      if (r.ok) return r.json().then(function (data) { loaded = true; show(data); });
+      if (now() >= OPEN_AT) noteEl.textContent = "Opening…";
+    }).catch(function () {
+      if (now() >= OPEN_AT) noteEl.textContent = "Can’t reach the server. Trying again…";
+    }).then(function () { inflight = false; });
+  }
+
+  function tick() {
+    if (loaded) return;
+    var left = OPEN_AT - now();
+    renderCount(Math.max(0, left));
+    if (left <= 0 && !crossed) { crossed = true; nextPoll = 0; }
+    var t = Date.now();
+    if (t >= nextPoll) {
+      nextPoll = t + (left > 600000 ? 60000 : left > 0 ? 5000 : 3000);
+      load();
+    }
+    setTimeout(tick, 1000 - (now() % 1000) + 10);
+  }
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) { nextPoll = 0; }
+  });
+  tick();
+
+  // Reveal / hide each speech.
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  Array.prototype.forEach.call(document.querySelectorAll(".speech"), function (art) {
+    var btn = art.querySelector("button");
+    var hint = art.querySelector(".hint");
+    var text = art.querySelector(".text");
+    function setOpen(open) {
+      btn.setAttribute("aria-expanded", String(open));
+      text.setAttribute("aria-hidden", String(!open));
+      hint.textContent = open ? "Tap to hide" : "Tap to read";
+      if (reduce) {
+        text.classList.toggle("open", open);
+        text.style.maxHeight = open ? "none" : "";
+        return;
+      }
+      text.style.maxHeight = text.scrollHeight + "px";
+      if (open) {
+        text.classList.add("open");
+        var done = function (e) {
+          if (e.propertyName !== "max-height") return;
+          text.removeEventListener("transitionend", done);
+          if (text.classList.contains("open")) text.style.maxHeight = "none";
+        };
+        text.addEventListener("transitionend", done);
+      } else {
+        void text.offsetHeight;
+        text.classList.remove("open");
+        text.style.maxHeight = "";
+        if (art.getBoundingClientRect().top < 0) art.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    btn.addEventListener("click", function () {
+      setOpen(btn.getAttribute("aria-expanded") !== "true");
+    });
+    text.addEventListener("click", function () {
+      if (!text.classList.contains("open")) setOpen(true);
+    });
+  });
+})();
+</script>
+</body>
+</html>
